@@ -276,4 +276,7 @@ def start_scan():
             exploit_open_redirect(url)
 
     if directory_traversal_result:
-        exploit_choice = input("
+        exploit_choice = input("Do you want to exploit Directory Traversal? (yes/no): ").lower()
+        if exploit_choice == 'yes':
+            exploit_directory_traversal(url)
+
